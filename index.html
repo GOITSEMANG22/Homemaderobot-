@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body>
+  <img class="profile-img" src="https://media.licdn.com/dms/image/C4E03AQHbhm5568LwQA/profile-displayphoto-shrink_400_400/0/1591290161832?e=1694649600&v=beta&t=LfGdzAL8k-N3vyQhTEBgUSnTuKsrTuIn56t3Qeo-Mtk" alt="">
+  <h1>HOME MADE ROBOT</h1></h1>
+  <p>CREATING AUTHENTIC FABRIC IN A WORLD WE COULDNOT SELL</p>
+
+  <!-- example icon -->
+  <div>
+      <a href="https://www.instagram.com/homemaderobot_?igsh=YzljYTk1ODg3Zg==" target="blank"><i data-feather="instagram"></i></a>
+      <a href="#" target="blank"><i data-feather="twitter"></i></a>
+      <a href="https://www.facebook.com/HMRxSA" target="blank"><i data-feather="facebook"></i></a>
+      <a href="#" target="blank"><i data-feather="linkedin"></i></a>
+      <a href="#" target="blank"><i data-feather="youtube"></i></a>
+    </div>
+    <!--
+    <a class="btn" href="mailto:goitsemangmolokwane22@gmail.com" target="blank">Email me</a>-->
+    <a class="btn" href="https://wa.me/27825347039" target="blank">Whatsapp</a>
+    <a class="btn" href="https://www.facebook.com/HMRxSA">View profile</a>
+    <!--<a class="btn" href="mailto:wildfrp@outlook.com" target="blank">Hire me</a>-->
+    
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/417470632_219692274540806_6646595491855611800_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=V1q7EelyvfkAX9mUjFZ&_nc_ht=scontent-jnb1-1.xx&oh=00_AfBddSFkfii525k4hOBpp1tDujAHEONUGbmSGlTN1wU2gg&oe=65AC19DC" style="width:100%">
+  <div class="text">HomeMadeRobot</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/417373234_219694271207273_580361462332742892_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=OzoJeEM9kRYAX8JNutS&_nc_ht=scontent-jnb1-1.xx&oh=00_AfBjWTsEA_-A8nMu-nuG1bPpVS6crmHvUDwddvW1RQfsXw&oe=65ABFDCE" style="width:100%">
+  <div class="text">HomeMadeRobot</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/417492484_219694104540623_4618511818504439518_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=6Vt3V7R6ENwAX88XFZb&_nc_ht=scontent-jnb1-1.xx&oh=00_AfC87ule-aps5EaGYjaAAQXgZOWf91v8y-eo7IUxcyynAw&oe=65AB0E40" style="width:100%">
+  <div class="text">HomeMadeRobot</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+    <script>
+      feather.replace()
+      
+      let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+</body>
+</html>
